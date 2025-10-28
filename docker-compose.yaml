@@ -3,9 +3,9 @@ services:
    dimden_mood:
     build: .
     container_name: dimden_mood
-    user: X:X #insert UID and GID of target user here
+    user: "1000:1000"
     ports:
       - 8228:8228
     restart: unless-stopped
     volumes:
-      - /path/to/where/db/should/go:/mnt/db
+      - /srv/dev-disk-by-uuid-33149383-18c3-4183-a35b-037e5853c221/RemoteSystemData/dimden_mood:/mnt/db
